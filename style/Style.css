@@ -1,0 +1,551 @@
+/************ Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+/************** Menu *************************/
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+  background-color: #d6e6ff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*.  LOGO   */
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+/*.    DESKTOP MENU.    */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+
+  color: #3b66a7;
+  text-decoration: none;
+
+  font-family:
+    Fugaz system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #3f7f31;
+}
+
+/*.    BURGER HIDDEN ON DESKTOP.  */
+.burger {
+  display: none;
+
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*     MOBILE.    */
+@media (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+/********* FORSIDE *******/
+
+/*.    OVERSKRIFTER.    */
+
+h1 {
+  margin: 30px 20px;
+  font-size: 2.5rem;
+  color: #214c8c;
+
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.forside {
+  position: relative;
+}
+
+.forside img {
+  display: block;
+  padding-inline: 15px;
+  height: 400px;
+  object-fit: cover;
+}
+.forside h1 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  color: white;
+  text-align: left;
+  font-size: 3.5rem;
+
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  margin: 20px 10px 20px;
+  font-size: 2rem;
+  color: #214c8c;
+
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*.     FORSIDE BILLEDE HIDDEN     */
+
+/*.     TILMELD BOKS.   */
+.tilmeld_boks {
+  margin: 20px;
+  padding: 25px;
+
+  background-color: #ff0f0f;
+  border-radius: 5px;
+
+  text-align: start;
+}
+
+.tilmeld_boks a {
+  display: inline-block;
+
+  padding: 12px 27px;
+
+  background-color: #0ab91f;
+  color: rgb(255, 255, 255);
+
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: "Carter One", system-ui;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.tilmeld_boks p {
+  margin-bottom: 0;
+  padding: 10px;
+
+  color: #ffffff;
+  line-height: 1.6;
+
+  font-family: "Slabo 13px", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*.      MINI MENU.    */
+.mini_menu {
+  margin: 20px;
+  padding: 20px;
+
+  background-color: #d6e6ff;
+  border-radius: 15px;
+}
+
+.mini_menu nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.mini_menu a {
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+  text-align: center;
+
+  color: #136700;
+  font-family: "Slabo 13px", serif;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.mini_menu img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.mini_menu span {
+  padding-top: 2px;
+  font-size: 1rem;
+}
+/*.    OM SBK.    */
+.om_sbk {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+.om_sbk_tekst h2 {
+  margin-bottom: 15px;
+}
+
+.om_sbk_tekst p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+
+  font-family: "Slabo 13px", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.om_sbk img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/*.      NYHEDER.    */
+.nyheder_section {
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+
+.nyheder_section > h2 {
+  margin-bottom: 25px;
+}
+
+.nyheder {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.nyhed {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.nyhed img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.nyhed > div {
+  padding: 20px;
+}
+
+.nyhed h3 {
+  margin: 0 0 10px;
+  color: #d50202;
+
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 1.5rem;
+}
+
+.nyhed p {
+  line-height: 1.5;
+  margin-bottom: 15px;
+
+  font-family: "Slabo 13px", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nyhed a {
+  text-decoration: none;
+  color: #d50202;
+
+  font-family: "Slabo 13px", serif;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+/********** Kalender *******/
+/*.      PROFIL HIDDEN.   */
+.profil {
+  display: none;
+}
+
+/*.    MINI MENU 2.    */
+.mini_menu_2 {
+  margin: 20px;
+  padding: 20px;
+
+  background-color: #d6e6ff;
+  border-radius: 15px;
+
+  box-shadow: 5px 5px 8px hsl(216, 48%, 44%, 41%);
+}
+
+.mini_menu_2 nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.mini_menu_2 a {
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+  text-align: center;
+
+  color: #136700;
+
+  font-family: "Slabo 13px", serif;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.mini_menu_2 img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.mini_menu_2 span {
+  padding-top: 2px;
+  font-size: 1rem;
+}
+
+/*.      SKEMA.     */
+.skema {
+  margin: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #3b66a7;
+}
+
+/*      SKEMA TOP.      */
+.skema_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 20px;
+
+  background-color: #3b66a7;
+  color: white;
+}
+
+.skema_top h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+
+  font-family: "Carter One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.skema_top img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+/*.      SKEMA INDHOLD.    */
+.skema_indhold {
+  padding: 20px;
+  background-color: #d6e6ff;
+  border: 5px solid #3b66a7;
+  border-radius: 15px;
+
+  box-shadow: inset 3px 3px 5px hsl(216, 57%, 34%, 53%);
+}
+
+/*.        SKEMA DAGE.    */
+.skema_dage {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  margin-bottom: 15px;
+  padding: 15px;
+
+  background-color: hsl(109, 70%, 70%, 53%);
+  border-radius: 10px;
+  align-items: start;
+
+  box-shadow: 5px 5px 8px hsl(216, 48%, 44%, 41%);
+}
+
+.skema_dage h2 {
+  margin: 0;
+  color: #235318;
+  font-size: 1.75rem;
+}
+
+.skema_dage h3 {
+  margin-bottom: 15px;
+  color: #3f7f31;
+
+  font-family: "Quantico", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.skema_dage p {
+  margin: 0;
+  color: #103109;
+
+  font-family: "Slabo 13px", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+}
+/********* TURNERINGER *******/
+/*.     HOLDOPSTILLING.   */
+.holdopstilling {
+  margin: 20px;
+  padding: 20px;
+  background-color: #d6e6ff;
+  border: 5px solid #3b66a7;
+  border-radius: 15px;
+
+  box-shadow: inset 3px 3px 5px hsl(216, 57%, 34%, 53%);
+}
+
+/*.    HOLDOPSTILLING TOP.   */
+.holdopstilling h1 {
+  margin: 0;
+  padding: 15px;
+  color: #214c8c;
+  font-size: 2.5rem;
+
+  text-align: left;
+}
+
+.holdopstilling h1:first-of-type {
+  color: #ff1f1f;
+}
+
+.holdopstilling h1:last-child {
+  border-top: 2px solid #3b66a7;
+}
+
+/*.     HOLDOPSTILLING INDHOLD.   */
+.opstillings_indhold {
+  margin: 0;
+}
+
+.opstillings_indhold li {
+  list-style: none;
+  font-family: "Slabo 13px", serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.25rem;
+}
+
+.single li {
+  line-height: 28px;
+  padding-left: 10px;
+}
+
+.opstillings_indhold h2 {
+  padding: 10px;
+}
+.double ol {
+  padding: 10px;
+}
+.double li {
+  line-height: 20px;
+}
+
+/*************** FOOTER. *********/
+footer {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px 25px;
+
+  background-color: #d6e6ff;
+  padding: 40px 25px;
+
+  margin-top: 50px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #284c82;
+}
+
+footer h2 {
+  margin: 0 0 15px;
+  color: #1f3961;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+
+  font-family: "Slabo 13px", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer li {
+  margin-bottom: 10px;
+  color: #284c82;
+}
